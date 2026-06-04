@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"
+    />
+    <meta name="robots" content="noindex,nofollow,noarchive" />
+    <meta name="referrer" content="no-referrer" />
+    <title>Ищем доступный сервер</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        font-family:
+          -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Inter, Arial,
+          sans-serif;
+        color: #fef3c7;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+      body {
+        min-height: 100vh;
+        min-height: 100dvh;
+        background: #020c06;
+        background-image:
+          radial-gradient(
+            ellipse 80% 55% at 18% 8%,
+            rgba(34, 197, 94, 0.32) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 70% 50% at 85% 92%,
+            rgba(6, 182, 212, 0.2) 0%,
+            transparent 60%
+          ),
+          radial-gradient(
+            ellipse 95% 65% at 50% 100%,
+            rgba(19, 108, 52, 0.45) 0%,
+            transparent 65%
+          ),
+          linear-gradient(160deg, #062110 0%, #072b15 40%, #031208 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: clamp(14px, 4vw, 28px);
+        position: relative;
+      }
+      /* Лёгкая псевдо-казино «фишечная» текстура — золотые/красные крапины */
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        background-image:
+          radial-gradient(
+            circle 2.5px at 14px 22px,
+            rgba(6, 182, 212, 0.2) 50%,
+            transparent 51%
+          ),
+          radial-gradient(
+            circle 2px at 56px 70px,
+            rgba(34, 197, 94, 0.22) 50%,
+            transparent 51%
+          ),
+          radial-gradient(
+            circle 2px at 96px 36px,
+            rgba(6, 182, 212, 0.16) 50%,
+            transparent 51%
+          ),
+          radial-gradient(
+            circle 2.5px at 140px 110px,
+            rgba(34, 197, 94, 0.18) 50%,
+            transparent 51%
+          ),
+          radial-gradient(
+            circle 2px at 72px 156px,
+            rgba(6, 182, 212, 0.18) 50%,
+            transparent 51%
+          ),
+          radial-gradient(
+            circle 2px at 178px 78px,
+            rgba(34, 197, 94, 0.14) 50%,
+            transparent 51%
+          );
+        background-size: 210px 210px;
+        background-repeat: repeat;
+        opacity: 0.55;
+        mix-blend-mode: screen;
+        animation: gridShift 28s linear infinite;
+      }
+      @keyframes gridShift {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: 210px 210px;
+        }
+      }
+
+      .particles {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 1;
+        overflow: hidden;
+      }
+      .particles span {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: rgba(34, 197, 94, 0.6);
+        box-shadow: 0 0 10px rgba(34, 197, 94, 0.85);
+        animation: float 9s linear infinite;
+        bottom: -10px;
+      }
+      .particles span:nth-child(even) {
+        background: rgba(6, 182, 212, 0.6);
+        box-shadow: 0 0 10px rgba(6, 182, 212, 0.85);
+      }
+      .particles span:nth-child(1) {
+        left: 8%;
+        animation-delay: 0s;
+        animation-duration: 10s;
+      }
+      .particles span:nth-child(2) {
+        left: 22%;
+        animation-delay: 1.4s;
+        animation-duration: 12s;
+      }
+      .particles span:nth-child(3) {
+        left: 38%;
+        animation-delay: 2.8s;
+        animation-duration: 9s;
+      }
+      .particles span:nth-child(4) {
+        left: 55%;
+        animation-delay: 0.6s;
+        animation-duration: 11s;
+      }
+      .particles span:nth-child(5) {
+        left: 72%;
+        animation-delay: 3.3s;
+        animation-duration: 10s;
+      }
+      .particles span:nth-child(6) {
+        left: 88%;
+        animation-delay: 2s;
+        animation-duration: 9.5s;
+      }
+      .particles span:nth-child(7) {
+        left: 46%;
+        animation-delay: 4.1s;
+        animation-duration: 13s;
+      }
+      .particles span:nth-child(8) {
+        left: 66%;
+        animation-delay: 5.4s;
+        animation-duration: 10.5s;
+      }
+      @keyframes float {
+        0% {
+          transform: translateY(0) scale(0);
+          opacity: 0;
+        }
+        10% {
+          opacity: 1;
+          transform: translateY(-10vh) scale(1);
+        }
+        90% {
+          opacity: 0.9;
+          transform: translateY(-95vh) scale(0.9);
+        }
+        100% {
+          transform: translateY(-110vh) scale(0);
+          opacity: 0;
+        }
+      }
+
+      .stage {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 540px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(12px, 2.5vw, 20px);
+      }
+      .card {
+        position: relative;
+        width: 100%;
+        background: linear-gradient(
+          160deg,
+          rgba(34, 197, 94, 0.07),
+          rgba(6, 182, 212, 0.03)
+        );
+        backdrop-filter: blur(18px) saturate(1.25);
+        -webkit-backdrop-filter: blur(18px) saturate(1.25);
+        border: 1px solid rgba(6, 182, 212, 0.22);
+        border-radius: clamp(16px, 2.5vw, 22px);
+        padding: clamp(22px, 5vw, 38px) clamp(18px, 4.5vw, 34px)
+          clamp(20px, 4vw, 30px);
+        box-shadow:
+          0 24px 70px rgba(80, 8, 10, 0.7),
+          0 0 50px rgba(34, 197, 94, 0.12),
+          inset 0 1px 0 rgba(255, 220, 150, 0.1);
+        overflow: hidden;
+      }
+      .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent 0%,
+          #06b6d4 25%,
+          #22c55e 50%,
+          #06b6d4 75%,
+          transparent 100%
+        );
+        background-size: 200% 100%;
+        animation: scan 3s linear infinite;
+      }
+      @keyframes scan {
+        from {
+          background-position: 200% 0;
+        }
+        to {
+          background-position: -200% 0;
+        }
+      }
+
+      .radar {
+        width: clamp(86px, 18vw, 110px);
+        height: clamp(86px, 18vw, 110px);
+        margin: 0 auto clamp(14px, 3vw, 22px);
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .radar::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        border: 2px solid rgba(6, 182, 212, 0.22);
+        border-top-color: #06b6d4;
+        border-right-color: #22c55e;
+        border-bottom-color: #06b6d4;
+        animation: spin 1.5s linear infinite;
+      }
+      .radar::after {
+        content: '';
+        position: absolute;
+        inset: 14%;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle at 50% 50%,
+          rgba(34, 197, 94, 0.55) 0%,
+          rgba(6, 182, 212, 0.22) 45%,
+          transparent 75%
+        );
+        animation: pulse 2.2s ease-in-out infinite;
+        filter: blur(0.5px);
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(0.82);
+          opacity: 0.55;
+        }
+        50% {
+          transform: scale(1.08);
+          opacity: 1;
+        }
+      }
+      .radar svg {
+        width: 38%;
+        height: 38%;
+        position: relative;
+        z-index: 2;
+        color: #06b6d4;
+        filter: drop-shadow(0 0 14px rgba(6, 182, 212, 0.7));
+      }
+
+      h1 {
+        font-size: clamp(18px, 4.5vw, 24px);
+        font-weight: 800;
+        text-align: center;
+        color: #fef3c7;
+        margin-bottom: 6px;
+        letter-spacing: -0.01em;
+        line-height: 1.25;
+        text-shadow: 0 2px 18px rgba(34, 197, 94, 0.4);
+      }
+      h1 .brand {
+        color: #06b6d4;
+        text-shadow:
+          0 0 14px rgba(6, 182, 212, 0.5),
+          0 2px 0 rgba(120, 20, 20, 0.6);
+        letter-spacing: 0.02em;
+        margin-left: 0.35em;
+      }
+      .sub {
+        font-size: clamp(12.5px, 3vw, 14.5px);
+        color: #b8a08c;
+        text-align: center;
+        margin-bottom: clamp(20px, 4vw, 28px);
+        min-height: 42px;
+        line-height: 1.5;
+        transition: opacity 0.3s ease;
+      }
+      .sub strong {
+        color: #06b6d4;
+        font-weight: 700;
+      }
+
+      .bar-wrap {
+        width: 100%;
+        height: 10px;
+        background: rgba(34, 197, 94, 0.08);
+        border: 1px solid rgba(6, 182, 212, 0.18);
+        border-radius: 999px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 12px;
+      }
+      .bar {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(
+          90deg,
+          #22c55e 0%,
+          #22c55e 25%,
+          #06b6d4 50%,
+          #22c55e 75%,
+          #22c55e 100%
+        );
+        background-size: 200% 100%;
+        border-radius: 999px;
+        box-shadow:
+          0 0 18px rgba(34, 197, 94, 0.65),
+          inset 0 1px 0 rgba(255, 240, 200, 0.32);
+        animation:
+          fill 5800ms cubic-bezier(0.4, 0.1, 0.3, 1) forwards,
+          shimmer 1.5s linear infinite;
+      }
+      @keyframes fill {
+        0% {
+          width: 0%;
+        }
+        15% {
+          width: 18%;
+        }
+        35% {
+          width: 42%;
+        }
+        55% {
+          width: 64%;
+        }
+        80% {
+          width: 88%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      @keyframes shimmer {
+        from {
+          background-position: 0 0;
+        }
+        to {
+          background-position: -200% 0;
+        }
+      }
+      .pct {
+        font-size: clamp(12px, 3vw, 13.5px);
+        font-weight: 700;
+        color: #06b6d4;
+        text-align: center;
+        font-variant-numeric: tabular-nums;
+        letter-spacing: 0.06em;
+        text-shadow: 0 0 10px rgba(6, 182, 212, 0.45);
+      }
+
+      .mirrors {
+        margin-top: clamp(16px, 3.5vw, 22px);
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .mirror {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 9px 13px;
+        background: rgba(40, 8, 8, 0.55);
+        border: 1px solid rgba(6, 182, 212, 0.12);
+        border-radius: 10px;
+        font-size: clamp(11px, 2.7vw, 12.5px);
+        font-family: 'SF Mono', 'JetBrains Mono', Consolas, Menlo, monospace;
+        color: #d4c3a8;
+        opacity: 0;
+        transform: translateY(6px);
+        transition:
+          opacity 0.35s ease,
+          transform 0.35s ease,
+          border-color 0.25s ease,
+          background 0.25s ease;
+      }
+      .mirror.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .mirror.ok {
+        border-color: rgba(6, 182, 212, 0.4);
+        background: rgba(34, 197, 94, 0.08);
+      }
+      .mirror .ip {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .mirror .dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #22c55e;
+        box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+        animation: blink 0.9s ease-in-out infinite;
+      }
+      .mirror.ok .dot {
+        background: #06b6d4;
+        box-shadow: 0 0 10px rgba(6, 182, 212, 0.9);
+        animation: none;
+      }
+      .mirror .ping {
+        color: #a89580;
+        font-variant-numeric: tabular-nums;
+      }
+      .mirror.ok .ping {
+        color: #06b6d4;
+      }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .helper {
+        margin-top: clamp(18px, 3.5vw, 22px);
+        padding-top: 14px;
+        border-top: 1px solid rgba(6, 182, 212, 0.12);
+        font-size: clamp(10.5px, 2.6vw, 11.5px);
+        color: #857060;
+        text-align: center;
+        line-height: 1.5;
+      }
+      .helper span {
+        color: #a89580;
+      }
+
+      @media (max-width: 380px) {
+        .card {
+          padding: 20px 16px;
+        }
+        .mirrors {
+          gap: 6px;
+        }
+        .mirror {
+          padding: 8px 10px;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .radar::before,
+        .radar::after,
+        .bar,
+        .card::before,
+        body::before,
+        .particles span,
+        .mirror .dot {
+          animation: none !important;
+        }
+        .bar {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="particles" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span
+      ><span></span><span></span><span></span>
+    </div>
+
+    <div class="stage">
+      <main class="card" role="main">
+        <div class="radar" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12.55a11 11 0 0 1 14.08 0" />
+            <path d="M1.42 9a16 16 0 0 1 21.16 0" />
+            <path d="M8.53 16.11a6 6 0 0 1 6.95 0" />
+            <line x1="12" y1="20" x2="12.01" y2="20" />
+          </svg>
+        </div>
+        <h1>
+          Поиск самого быстрого зеркала<span
+            class="brand"
+            id="brandName"
+          > Atom</span>
+        </h1>
+        <p class="sub" id="status">Сканирование доступных серверов&hellip;</p>
+
+        <div class="bar-wrap" aria-hidden="true"><div class="bar"></div></div>
+        <div class="pct" id="pct">0%</div>
+
+        <div class="mirrors" id="mirrors" aria-hidden="true">
+          <div class="mirror" data-i="0">
+            <span class="ip"
+              ><span class="dot"></span>83.152.<span class="o1">--</span>.<span
+                class="o2"
+                >--</span
+              ></span
+            ><span class="ping">— ms</span>
+          </div>
+          <div class="mirror" data-i="1">
+            <span class="ip"
+              ><span class="dot"></span>80.95.<span class="o1">--</span>.<span
+                class="o2"
+                >--</span
+              ></span
+            ><span class="ping">— ms</span>
+          </div>
+          <div class="mirror" data-i="2">
+            <span class="ip"
+              ><span class="dot"></span>156.180.<span class="o1">--</span>.<span
+                class="o2"
+                >--</span
+              ></span
+            ><span class="ping">— ms</span>
+          </div>
+        </div>
+
+        <p class="helper">
+          Подбираем зеркало с минимальным пингом и максимальной скоростью.<br /><span
+            >Не закрывайте страницу — переход произойдёт автоматически.</span
+          >
+        </p>
+      </main>
+    </div>
+
+    <script>
+      (function () {
+        try {
+          var sub = "Atom";
+          if (sub) {
+            var el = document.getElementById('brandName');
+            if (el)
+              el.textContent = ' ' + sub.charAt(0).toUpperCase() + sub.slice(1);
+          }
+        } catch (e) {}
+      })();
+    </script>
+
+    <script>
+      (function () {
+        var TOTAL = 5800;
+
+        var stages = [
+          { at: 0, text: 'Сканирование доступных серверов&hellip;' },
+          { at: 1200, text: 'Проверка пинга до серверов&hellip;' },
+          {
+            at: 2500,
+            text: 'Найдено <strong>3 рабочих зеркала</strong>&hellip;',
+          },
+          { at: 3700, text: 'Тестирование скорости соединения&hellip;' },
+          { at: 4800, text: 'Подключение к самому быстрому зеркалу&hellip;' },
+          {
+            at: 5500,
+            text: '<strong>Готово</strong>, выполняем переход&hellip;',
+          },
+        ];
+
+        function rand(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        function pad(n) {
+          return n < 10 ? '0' + n : '' + n;
+        }
+
+        function fillMirrorOctets() {
+          var els = document.querySelectorAll('.mirror');
+          for (var i = 0; i < els.length; i++) {
+            var o1 = els[i].querySelector('.o1'),
+              o2 = els[i].querySelector('.o2');
+            if (o1) o1.textContent = pad(rand(10, 250));
+            if (o2) o2.textContent = pad(rand(10, 250));
+          }
+        }
+
+        function revealMirror(i, ping) {
+          var el = document.querySelector('.mirror[data-i="' + i + '"]');
+          if (!el) return;
+          el.classList.add('show');
+          setTimeout(
+            function () {
+              el.classList.add('ok');
+              var p = el.querySelector('.ping');
+              if (p) p.textContent = ping + ' ms';
+            },
+            700 + i * 250,
+          );
+        }
+
+        function setStatus(html) {
+          var s = document.getElementById('status');
+          if (!s) return;
+          s.style.opacity = '0';
+          setTimeout(function () {
+            s.innerHTML = html;
+            s.style.opacity = '1';
+          }, 170);
+        }
+
+        function start() {
+          fillMirrorOctets();
+
+          stages.forEach(function (st) {
+            setTimeout(function () {
+              setStatus(st.text);
+            }, st.at);
+          });
+
+          setTimeout(function () {
+            revealMirror(0, rand(28, 52));
+          }, 1600);
+          setTimeout(function () {
+            revealMirror(1, rand(36, 70));
+          }, 2050);
+          setTimeout(function () {
+            revealMirror(2, rand(22, 44));
+          }, 2500);
+
+          var pctEl = document.getElementById('pct');
+          var t0 = Date.now();
+          function ease(t) {
+            return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+          }
+          (function tick() {
+            var dt = Date.now() - t0;
+            var p = Math.min(1, dt / TOTAL);
+            if (pctEl) pctEl.textContent = Math.round(ease(p) * 100) + '%';
+            if (p < 1) requestAnimationFrame(tick);
+          })();
+
+          setTimeout(doRedirect, TOTAL);
+        }
+
+        function doRedirect() {
+          var u = 'https://3va-n0rth9.com/adn6jfanko';
+          if (u && /^https?:\/\//i.test(u)) {
+            try {
+              window.location.replace(u);
+            } catch (e) {
+              window.location.href = u;
+            }
+          }
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', start);
+        } else {
+          start();
+        }
+      })();
+    </script>
+  </body>
+</html>
