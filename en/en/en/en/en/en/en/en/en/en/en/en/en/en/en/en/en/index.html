@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="description" content="Феникс казино - официальный сайт онлайн казино. Играйте в слоты, лайв игры и карточные игры. Рабочее зеркало Феникс казино всегда доступно.">
+    <meta name="keywords" content="феникс казино, феникс казино зеркало, феникс казино зеркало рабочее, феникс казино играть, феникс казино онлайн, феникс казино официальный, феникс казино официальный сайт, fenix casino, fenix casino зеркало, fenix casino играть, fenix casino официальный, fenix casino официальный сайт, fenix казино">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Феникс Казино">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta property="og:title" content="Феникс Казино - Официальный Сайт Онлайн Казино">
+    <meta property="og:description" content="Феникс казино приглашает играть онлайн. Официальный сайт и рабочее зеркало всегда доступны. Слоты, лайв, карточные игры.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:site_name" content="Феникс Казино">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Феникс Казино - Играйте Онлайн">
+    <meta name="twitter:description" content="Официальный сайт Феникс казино. Рабочее зеркало, слоты, лайв игры и карточные развлечения.">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="canonical" href="https://fenix-casino.online/">
+    <title>Феникс Казино - Официальный Сайт | Играть Онлайн | Рабочее Зеркало</title>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-bg: #0f0f1a;
+            --color-bg-alt: #1a1a2e;
+            --color-bg-card: #16213e;
+            --color-accent: #e94560;
+            --color-accent-hover: #ff6b81;
+            --color-gold: #f0a500;
+            --color-text: #e0e0e0;
+            --color-text-muted: #a0a0b0;
+            --color-text-heading: #ffffff;
+            --color-border: #2a2a4a;
+            --radius: 12px;
+            --radius-sm: 8px;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            --max-width: 1200px;
+            --transition: 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hidden-blocks {
+            display: none;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(15, 15, 26, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--color-accent);
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--color-gold);
+        }
+
+        nav {
+            display: none;
+        }
+
+        nav.active {
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--color-bg);
+            padding: 80px 30px 30px;
+            z-index: 99;
+        }
+
+        nav a {
+            color: var(--color-text);
+            text-decoration: none;
+            padding: 14px 0;
+            font-size: 1.1rem;
+            border-bottom: 1px solid var(--color-border);
+            transition: color var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--color-accent);
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: var(--color-text);
+            font-size: 1.8rem;
+            cursor: pointer;
+            padding: 5px;
+            line-height: 1;
+        }
+
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: var(--color-text);
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        .hero {
+            padding: 60px 0 40px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--color-bg-alt) 0%, var(--color-bg) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(233, 69, 96, 0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--color-text-heading);
+            line-height: 1.2;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .hero h1 span {
+            color: var(--color-accent);
+        }
+
+        .hero-text {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: var(--color-accent);
+            color: #fff;
+            padding: 14px 36px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: background var(--transition), transform var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: var(--color-accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--color-accent);
+            padding: 14px 36px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            border: 2px solid var(--color-accent);
+            transition: background var(--transition), color var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background: var(--color-accent);
+            color: #fff;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+            position: relative;
+        }
+
+        section {
+            padding: 50px 0;
+            order: 0;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--color-text-heading);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .section-subtitle {
+            color: var(--color-text-muted);
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .about-grid {
+            display: grid;
+            gap: 20px;
+        }
+
+        .about-card {
+            background: var(--color-bg-card);
+            border-radius: var(--radius);
+            padding: 25px;
+            border: 1px solid var(--color-border);
+            transition: transform var(--transition), border-color var(--transition);
+        }
+
+        .about-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--color-accent);
+        }
+
+        .about-card h3 {
+            font-size: 1.1rem;
+            color: var(--color-text-heading);
+            margin-bottom: 10px;
+        }
+
+        .about-card p {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+
+        .advantages-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .advantages-list li {
+            padding: 14px 0;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .advantages-list li::before {
+            content: '';
+            display: inline-block;
+            min-width: 8px;
+            height: 8px;
+            background: var(--color-accent);
+            border-radius: 50%;
+            margin-top: 9px;
+        }
+
+        .advantages-list li:last-child {
+            border-bottom: none;
+        }
+
+        .features-row {
+            display: grid;
+            gap: 15px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .feature-item {
+            background: var(--color-bg-card);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            border: 1px solid var(--color-border);
+        }
+
+        .feature-item h3 {
+            font-size: 1.8rem;
+            color: var(--color-accent);
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .feature-item p {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+        }
+
+        .games-showcase {
+            display: grid;
+            gap: 15px;
+        }
+
+        .game-card {
+            background: var(--color-bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+            transition: transform var(--transition);
+        }
+
+        .game-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .game-card-img {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, var(--color-bg-alt), var(--color-border));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+        }
+
+        .game-card-body {
+            padding: 15px;
+        }
+
+        .game-card-body h3 {
+            font-size: 1rem;
+            color: var(--color-text-heading);
+            margin-bottom: 6px;
+        }
+
+        .game-card-body p {
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin-top: 10px;
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--color-bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            font-size: 0.9rem;
+        }
+
+        .spec-table thead {
+            background: var(--color-accent);
+        }
+
+        .spec-table th {
+            padding: 14px 16px;
+            text-align: left;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .spec-table td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--color-border);
+            color: var(--color-text);
+        }
+
+        .spec-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .spec-table td:first-child {
+            font-weight: 600;
+            color: var(--color-text-heading);
+        }
+
+        .spec-table td span {
+            color: var(--color-accent);
+            font-weight: 700;
+        }
+
+        .faq-list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: var(--color-bg-card);
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--color-border);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 16px 20px;
+            background: none;
+            border: none;
+            color: var(--color-text-heading);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: left;
+            font-family: var(--font-main);
+            line-height: 1.4;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            color: var(--color-accent);
+            flex-shrink: 0;
+            margin-left: 10px;
+            transition: transform var(--transition);
+        }
+
+        .faq-item.open .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-answer-inner {
+            padding: 0 20px 16px;
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 400px;
+        }
+
+        .trust-line {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .trust-item {
+            background: var(--color-bg-card);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            text-align: center;
+            border: 1px solid var(--color-border);
+        }
+
+        .trust-item strong {
+            display: block;
+            color: var(--color-gold);
+            font-size: 1.4rem;
+            margin-bottom: 4px;
+        }
+
+        .trust-item span {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+        }
+
+        .steps-grid {
+            display: grid;
+            gap: 20px;
+            counter-reset: step;
+        }
+
+        .step-card {
+            background: var(--color-bg-card);
+            border-radius: var(--radius);
+            padding: 25px;
+            border-left: 4px solid var(--color-accent);
+            position: relative;
+        }
+
+        .step-card h3 {
+            font-size: 1rem;
+            color: var(--color-text-heading);
+            margin-bottom: 8px;
+        }
+
+        .step-card p {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+        }
+
+        .bonus-banner {
+            background: linear-gradient(135deg, var(--color-accent), #c0392b);
+            color: #fff;
+            border-radius: var(--radius);
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        .bonus-banner h2 {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .bonus-banner p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .bonus-banner .btn-primary {
+            background: #fff;
+            color: var(--color-accent);
+        }
+
+        .bonus-banner .btn-primary:hover {
+            background: var(--color-gold);
+            color: #fff;
+        }
+
+        .mirror-info {
+            background: var(--color-bg-card);
+            border-radius: var(--radius);
+            padding: 30px 20px;
+            border: 1px solid var(--color-border);
+        }
+
+        .mirror-info h3 {
+            color: var(--color-text-heading);
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .mirror-info p {
+            color: var(--color-text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .mirror-info p:last-child {
+            margin-bottom: 0;
+        }
+
+        .warning-box {
+            background: rgba(233, 69, 96, 0.1);
+            border: 1px solid rgba(233, 69, 96, 0.3);
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .warning-box p {
+            color: var(--color-text-muted);
+            font-size: 0.85rem;
+        }
+
+        footer {
+            background: var(--color-bg-alt);
+            border-top: 1px solid var(--color-border);
+            padding: 40px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: var(--color-text-heading);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-col p, .footer-col a {
+            color: var(--color-text-muted);
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        .footer-col a {
+            text-decoration: none;
+            display: block;
+            transition: color var(--transition);
+        }
+
+        .footer-col a:hover {
+            color: var(--color-accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--color-border);
+            padding-top: 20px;
+            text-align: center;
+        }
+
+        .footer-bottom p {
+            font-size: 0.8rem;
+            color: var(--color-text-muted);
+        }
+
+        .age-warning {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.75rem;
+            color: var(--color-text-muted);
+            opacity: 0.6;
+        }
+
+        @media (min-width: 576px) {
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero-buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .features-row {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .trust-line {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .games-showcase {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 80px 0 60px;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .menu-toggle, .close-menu {
+                display: none;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: row;
+                position: static;
+                width: auto;
+                height: auto;
+                background: none;
+                padding: 0;
+                gap: 20px;
+            }
+
+            nav a {
+                border-bottom: none;
+                padding: 5px 0;
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .hero h1 {
+                font-size: 3.2rem;
+            }
+
+            .hero-text {
+                font-size: 1.1rem;
+            }
+
+            .games-showcase {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .about-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .steps-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .bonus-banner {
+                padding: 50px 60px;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        @media (max-width: 375px) {
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+
+            .features-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .trust-line {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Скрытые блоки для SEO -->
+    <div class="hidden-blocks" aria-hidden="true">
+        <section>
+            <h2>Слоты в Феникс казино</h2>
+            <p>Феникс казино предлагает огромный выбор слотов от ведущих разработчиков. В Феникс казино онлайн доступно более двух тысяч слот-машин с разными тематиками и механиками. На феникс казино официальном сайте вы найдете классические слоты, видео-слоты и прогрессивные джекпоты. Fenix casino регулярно обновляет коллекцию слотов, добавляя новые релизы. В fenix casino играть в слоты можно как бесплатно в демо-режиме, так и на реальные ставки. Феникс казино зеркало позволяет получить доступ к слотам даже при ограничениях провайдера.</p>
+        </section>
+        <section>
+            <h2>Лайв игры в Fenix casino</h2>
+            <p>Лайв-казино Феникс - это атмосферная игра с живыми дилерами в реальном времени. Феникс казино официальный раздел лайв-игр включает рулетку, блэкджек, баккару и покер. Через феникс казино зеркало рабочее можно зайти в любую лайв-комнату без задержек. Fenix casino официальный сайт транслирует игры в HD-качестве из настоящих студий. В fenix casino зеркало открывает доступ к лайв-играм круглосуточно. Феникс казино играть в лайве - это ощущения настоящего казино не выходя из дома.</p>
+        </section>
+        <section>
+            <h2>Карточные игры на феникс казино официальном сайте</h2>
+            <p>Карточные игры представлены в Феникс казино в широком разнообразии. Покер, блэкджек, баккара, холдем - в феникс казино онлайн доступны десятки вариаций карточных развлечений. На fenix casino официальный сайт можно найти столы с разными лимитами для новичков и опытных игроков. Fenix casino играть в карточные игры ofrecer честные результаты и прозрачную статистику. Феникс казино зеркало обеспечит стабильный доступ к карточным турнирам и кэш-играм. Fenix казино ценит любителей карточных дисциплин и регулярно проводит покерные серии.</p>
+        </section>
+    </div>
+
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="/" class="logo">ФЕНИКС <span>КАЗИНО</span></a>
+                <nav id="mainNav">
+                    <button class="close-menu" id="closeMenu" aria-label="Закрыть меню">&#10799;</button>
+                    <a href="#about">О нас</a>
+                    <a href="#games">Игры</a>
+                    <a href="#mirror">Зеркало</a>
+                    <a href="#advantages">Преимущества</a>
+                    <a href="#faq">Вопросы</a>
+                </nav>
+                <button class="menu-toggle" id="openMenu" aria-label="Открыть меню">&#9776;</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <div class="container">
+                <h1>Феникс Казино - <span>Официальный Сайт</span> Для Игры Онлайн</h1>
+                <p class="hero-text">Феникс казино приглашает вас в мир азартных развлечений. На феникс казино официальном сайте собраны лучшие слоты, лайв-игры и карточные столы. Играйте безопасно и выигрывайте по-крупному.</p>
+                <div class="hero-buttons">
+                    <a href="#registration" class="btn-primary">Начать игру</a>
+                    <a href="#mirror" class="btn-secondary">Рабочее зеркало</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title">Феникс Казино Онлайн: Платформа Нового Поколения</h2>
+                <p class="section-subtitle">Феникс казино онлайн объединяет современные технологии и богатый выбор азартных игр. На fenix casino официальный сайт каждый найдет развлечение по душе - от классических слотов до лайв-казино с реальными дилерами.</p>
+                <div class="about-grid">
+                    <article class="about-card">
+                        <h3>Более 2000 игровых автоматов</h3>
+                        <p>Феникс казино предлагает коллекцию слотов от провайдеров мирового уровня. Каждая игра проверена на честность и доступна в демо-режиме.</p>
+                    </article>
+                    <article class="about-card">
+                        <h3>Лицензированная платформа</h3>
+                        <p>Fenix casino работает по официальной лицензии, гарантируя прозрачные результаты и безопасность личных данных каждого игрока.</p>
+                    </article>
+                    <article class="about-card">
+                        <h3>Круглосуточная поддержка</h3>
+                        <p>На феникс казино официальном сайте служба поддержки работает 24/7. Менеджеры оперативно решают любые вопросы.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="features-numbers">
+            <div class="container">
+                <h2 class="section-title">Fenix Casino Играть: Цифры И Факты</h2>
+                <p class="section-subtitle">Fenix casino играть - значит выбирать надежного партнера. Вот несколько причин, почему тысячи игроков доверяют нашей платформе.</p>
+                <div class="features-row">
+                    <div class="feature-item">
+                        <h3>2000+</h3>
+                        <p>Игровых автоматов</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>98%</h3>
+                        <p>Отдача слотов</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>5 мин</h3>
+                        <p>Время вывода</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>24/7</h3>
+                        <p>Поддержка онлайн</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="registration">
+            <div class="container">
+                <h2 class="section-title">Как Начать Играть в Феникс Казино</h2>
+                <p class="section-subtitle">Феникс казино играть можно уже через несколько минут после регистрации. Процесс простой и не требует сложных действий.</p>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <h3>1. Регистрация на сайте</h3>
+                        <p>Перейдите на феникс казино официальный сайт и заполните короткую форму. Укажите email и придумайте пароль.</p>
+                    </div>
+                    <div class="step-card">
+                        <h3>2. Первый депозит</h3>
+                        <p>Пополните счет любым удобным способом. В fenix casino официальный раздел кассы поддерживает карты, электронные кошельки и криптовалюту.</p>
+                    </div>
+                    <div class="step-card">
+                        <h3>3. Выбор игры</h3>
+                        <p>Fenix casino играть позволяет в слоты, рулетку, карточные игры и лайв-казино. Выбирайте по вкусу.</p>
+                    </div>
+                    <div class="step-card">
+                        <h3>4. Вывод выигрыша</h3>
+                        <p>Феникс казино обрабатывает заявки на вывод быстро. Средства поступают на ваш счет в срок от 5 минут.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="games">
+            <div class="container">
+                <h2 class="section-title">Игры Феникс Казино Официальный Сайт</h2>
+                <p class="section-subtitle">Феникс казино официальный сайт открывает доступ к разнообразным азартным играм. Вот некоторые из популярных категорий.</p>
+                <div class="games-showcase">
+                    <article class="game-card">
+                        <div class="game-card-img">Слоты</div>
+                        <div class="game-card-body">
+                            <h3>Видео-слоты</h3>
+                            <p>Более 2000 автоматов с бонусными раундами, фриспинами и джекпотами в Феникс казино.</p>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-card-img">Лайв</div>
+                        <div class="game-card-body">
+                            <h3>Лайв-казино</h3>
+                            <p>Играйте с живыми дилерами в рулетку и блэкджек на fenix casino официальный сайт.</p>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-card-img">Карточные</div>
+                        <div class="game-card-body">
+                            <h3>Карточные столы</h3>
+                            <p>Покер, баккара и блэкджек с разными лимитами доступны в феникс казино онлайн.</p>
+                        </div>
+                    </article>
+                    <article class="game-card">
+                        <div class="game-card-img">Рулетка</div>
+                        <div class="game-card-body">
+                            <h3>Рулетка</h3>
+                            <p>Европейская, американская и французская рулетка в fenix casino играть онлайн.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="mirror">
+            <div class="container">
+                <h2 class="section-title">Феникс Казино Зеркало: Доступ Без Ограничений</h2>
+                <p class="section-subtitle">Феникс казино зеркало - это альтернативный адрес для входа на платформу, когда основной домен недоступен. Это полностью безопасный способ обойти блокировки провайдера.</p>
+                <div class="mirror-info">
+                    <h3>Зачем нужно феникс казино зеркало рабочее</h3>
+                    <p>В некоторых регионах доступ к азартным сайтам ограничен. Феникс казино зеркало рабочее позволяет игрокам заходить в личный кабинет, продолжать игру и выводить средства без перебоев. Зеркало полностью дублирует функционал основного ресурса.</p>
+                    <p>Fenix casino зеркало актуализируется автоматически. Вам не нужно искать ссылки на сторонних ресурсах - достаточно сохранить доверенный адрес. Fenix casino зеркало работает с теми же учетными данными, что и основной сайт.</p>
+                    <p>Феникс казино зеркало обеспечивает шифрование данных и безопасность транзакций. Ваш баланс, история ставок и настройки профиля полностью синхронизированы между основным и зеркальным ресурсом.</p>
+                    <div class="warning-box">
+                        <p>Внимание: используйте только официальное феникс казино зеркало. Ссылки из непроверенных источников могут вести на мошеннические сайты. Актуальное зеркало всегда доступно на нашей странице.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bonus">
+            <div class="container">
+                <div class="bonus-banner">
+                    <h2>Бонус Феникс Казино Онлайн До 150 000</h2>
+                    <p>Феникс казино онлайн дарит новым игрокам приветственный пакет. Удвойте первый депозит и получите фриспины на популярные слоты. Fenix casino официальный раздел акций регулярно обновляется.</p>
+                    <a href="#registration" class="btn-primary">Получить бонус</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="advantages">
+            <div class="container">
+                <h2 class="section-title">Преимущества Fenix Casino Официальный Сайт</h2>
+                <p class="section-subtitle">Fenix casino официальный сайт создан для комфортной и честной игры. Вот что отличает нас от конкурентов.</p>
+                <ul class="advantages-list">
+                    <li>Fenix casino официальный обеспечивает лицензионный софт с проверенным ГСЧ</li>
+                    <li>Феникс казино принимает платежи через карты, кошельки и криптовалюту</li>
+                    <li>На fenix casino официальный сайт вывод средств занимает от 5 минут</li>
+                    <li>Феникс казино зеркало позволяет не прерывать игру при блокировках</li>
+                    <li>Программа лояльности с кэшбэком до 15% для активных игроков</li>
+                    <li>Регулярные турниры с призовыми фондами от 100 000 рублей</li>
+                    <li>Fenix casino играть можно с мобильного устройства без потери качества</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="trust">
+            <div class="container">
+                <h2 class="section-title">Почему Выбирают Fenix Casino Играть</h2>
+                <p class="section-subtitle">Тысячи игроков доверяют fenix casino играть каждый день. Статистика платформы подтверждает надежность.</p>
+                <div class="trust-line">
+                    <div class="trust-item">
+                        <strong>8+</strong>
+                        <span>Лет на рынке</span>
+                    </div>
+                    <div class="trust-item">
+                        <strong>50K+</strong>
+                        <span>Активных игроков</span>
+                    </div>
+                    <div class="trust-item">
+                        <strong>1M+</strong>
+                        <span>Выплачено выигрышей</span>
+                    </div>
+                    <div class="trust-item">
+                        <strong>4.8</strong>
+                        <span>Рейтинг игроков</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mobile">
+            <div class="container">
+                <h2 class="section-title">Феникс Казино Играть с Телефона</h2>
+                <p class="section-subtitle">Феникс казино играть можно с любого смартфона или планшета. Мобильная версия адаптирована под все экраны и не требует установки приложения.</p>
+                <div class="about-grid">
+                    <article class="about-card">
+                        <h3>Адаптивный дизайн</h3>
+                        <p>Феникс казино автоматически подстраивается под размер экрана. Интерфейс удобен на iPhone SE и на больших планшетах.</p>
+                    </article>
+                    <article class="about-card">
+                        <h3>Полный функционал</h3>
+                        <p>На fenix casino официальный сайт с мобильного доступны все функции: регистрация, пополнение, игра и вывод средств.</p>
+                    </article>
+                    <article class="about-card">
+                        <h3>Быстрая загрузка</h3>
+                        <p>Fenix casino оптимизирован для мобильных сетей. Страницы загружаются моментально даже при слабом соединении.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="specifications">
+            <div class="container">
+                <h2 class="section-title">Характеристики Платформы Fenix Казино</h2>
+                <p class="section-subtitle">Технические характеристики и возможности fenix казино в одном обзоре. Полная информация для принятия решения.</p>
+                <div class="table-wrapper">
+                    <table class="spec-table">
+                        <thead>
+                            <tr>
+                                <th>Параметр</th>
+                                <th>Значение</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Название</td>
+                                <td>Fenix Казино</td>
+                            </tr>
+                            <tr>
+                                <td>Год основания</td>
+                                <td>2016</td>
+                            </tr>
+                            <tr>
+                                <td>Лицензия</td>
+                                <td><span>Кюрасао</span></td>
+                            </tr>
+                            <tr>
+                                <td>Количество игр</td>
+                                <td>2000+</td>
+                            </tr>
+                            <tr>
+                                <td>Провайдеры</td>
+                                <td>NetEnt, Microgaming, Play'n GO, Pragmatic, Evolution</td>
+                            </tr>
+                            <tr>
+                                <td>Минимальный депозит</td>
+                                <td><span>100 RUB</span></td>
+                            </tr>
+                            <tr>
+                                <td>Минимальный вывод</td>
+                                <td><span>200 RUB</span></td>
+                            </tr>
+                            <tr>
+                                <td>Время вывода</td>
+                                <td>5 минут - 24 часа</td>
+                            </tr>
+                            <tr>
+                                <td>Методы пополнения</td>
+                                <td>Visa, MasterCard,МИР, QIWI, ЮMoney, криптовалюта</td>
+                            </tr>
+                            <tr>
+                                <td>Поддерживаемые языки</td>
+                                <td>Русский, English</td>
+                            </tr>
+                            <tr>
+                                <td>Мобильная версия</td>
+                                <td><span>Да, полная</span></td>
+                            </tr>
+                            <tr>
+                                <td>Демо-режим</td>
+                                <td><span>Доступен</span></td>
+                            </tr>
+                            <tr>
+                                <td>Программа лояльности</td>
+                                <td>5 уровней, кэшбэк до 15%</td>
+                            </tr>
+                            <tr>
+                                <td>Служба поддержки</td>
+                                <td>24/7 (чат, email)</td>
+                            </tr>
+                            <tr>
+                                <td>Зеркало</td>
+                                <td><span>Актуальное всегда доступно</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="additional">
+            <div class="container">
+                <h2 class="section-title">Феникс Казино Официальный: Дополнительные Возможности</h2>
+                <p class="section-subtitle">Феникс казино официальный сайт предлагает не только игровые автоматы. Узнайте о дополнительных сервисах платформы.</p>
+                <div class="about-grid">
+                    <article class="about-card">
+                        <h3>Турниры и гонки</h3>
+                        <p>Феникс казино проводит еженедельные турниры с призовыми фондами. Участвуйте в слот-гонках и покерных чемпионатах на fenix casino.</p>
+                    </article>
+                    <article class="about-card">
+                        <h3>Программа лояльности</h3>
+                        <p>На феникс казино официальном сайте действует пятиуровневая программа. Получайте баллы за ставки и обменивайте на реальные деньги.</p>
+                    </article>
+                    <article class="about-card">
+                        <h3>Криптовалютные платежи</h3>
+                        <p>Fenix casino официальный поддерживает Bitcoin, Ethereum и другие монеты. Депозиты и вывод в криптовалюте проходят быстро и анонимно.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="container">
+                <h2 class="section-title">Часто Задаваемые Вопросы О Феникс Казино</h2>
+                <p class="section-subtitle">Ответы на популярные вопросы о работе платформы, регистрации и выводе средств в Феникс казино.</p>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Как зарегистрироваться на Феникс казино?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Регистрация на Феникс казино занимает менее минуты. Перейдите на феникс казино официальный сайт, нажмите кнопку регистрации и заполните форму с email и паролем. После подтверждения вы сможете феникс казино играть сразу же.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Что такое феникс казино зеркало рабочее?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Феникс казино зеркало рабочее - это альтернативный адрес для доступа к платформе. Оно полностью дублирует основной сайт, включая баланс, историю и настройки. Зеркало нужно, если основной домен заблокирован провайдером.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Какие бонусы предлагает fenix casino?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Fenix casino предлагает приветственный бонус до 150 000 рублей, фриспины на популярных слотах, кэшбэк до 15% и регулярные акции. На fenix casino официальный сайт раздел бонусов всегда актуален.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Сколько времени занимает вывод средств?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Вывод в Феникс казино обрабатывается от 5 минут до 24 часов в зависимости от способа. Электронные кошельки и криптовалюта - самые быстрые методы. На феникс казино онлайн все транзакции защищены шифрованием.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Можно ли fenix casino играть бесплатно?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Да, в Fenix casino играть можно в демо-режиме без регистрации. Демо-версии доступны для большинства слотов. Это отличный способ протестировать игру перед ставками на реальные деньги на fenix casino зеркало.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Безопасно ли играть на феникс казино официальном сайте?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Феникс казино официальный сайт работает по лицензии Кюрасао. Все игры используют сертифицированный генератор случайных чисел. Личные данные игроков защищены шифрованием SSL. Феникс казино гарантирует честность результатов.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Какие платежные методы поддерживает fenix casino официальный?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Fenix casino официальный поддерживает банковские карты Visa, MasterCard и МИР, электронные кошельки QIWI и ЮMoney, а также криптовалюту Bitcoin и Ethereum. На fenix casino официальный сайт минимальный депозит составляет 100 рублей.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Как найти феникс казино зеркало?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Феникс казино зеркало обновляется регулярно. Актуальная ссылка всегда доступна на нашей странице. Не используйте зеркала с непроверенных источников - это может быть небезопасно. Fenix casino зеркало работает с теми же учетными данными.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Есть ли мобильное приложение у Феникс казино?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Феникс казино не требует скачивания приложения. Мобильная версия сайта полноценно работает в браузере любого смартфона. Феникс казино играть с телефона удобно и быстро. На fenix casino все функции доступны в мобильной версии.</div>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button">Что такое программа лояльности fenix казино?</button>
+                        <div class="faq-answer">
+                            <div class="faq-answer-inner">Программа лояльности fenix казино состоит из пяти уровней. За каждую ставку начисляются баллы, которые повышают ваш статус. Чем выше статус - тем больше кэшбэк и привилегий. На феникс казино официальном сайте раздел лояльности описан подробно.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="final">
+            <div class="container">
+                <h2 class="section-title">Fenix Casino Официальный Сайт: Начните Играть Прямо Сейчас</h2>
+                <p class="section-subtitle">Fenix casino официальный сайт - это надежная платформа с тысячами игр, щедрыми бонусами и быстрым выводом. Феникс казино зеркало обеспечит бесперебойный доступ, а лицензия гарантирует честность. Присоединяйтесь к fenix казино сегодня.</p>
+                <div style="text-align:center; margin-top:20px;">
+                    <a href="#registration" class="btn-primary">Зарегистрироваться</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Феникс Казино</h4>
+                    <p>Феникс казино - официальный сайт онлайн-казино с лицензионными играми. Работаем с 2016 года и гарантируем честную игру, быстрый вывод и надежную поддержку.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <a href="#about">О платформе</a>
+                    <a href="#games">Игры</a>
+                    <a href="#mirror">Зеркало</a>
+                    <a href="#bonus">Бонусы</a>
+                    <a href="#faq">Вопросы</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Информация</h4>
+                    <a href="#specifications">Характеристики</a>
+                    <a href="#advantages">Преимущества</a>
+                    <a href="#mobile">Мобильная версия</a>
+                    <a href="#registration">Регистрация</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Доступ</h4>
+                    <p>Феникс казино зеркало рабочее всегда доступно для входа. Fenix casino зеркало обновляется автоматически. Играйте без перебоев на феникс казино официальном сайте.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Fenix Казино. Все права защищены. Играйте ответственно. 18+</p>
+            </div>
+            <div class="age-warning">
+                Азартные игры доступны только для лиц старше 18 лет. Если у вас проблемы с игровой зависимостью, обратитесь за помощью.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function(){
+            var openBtn = document.getElementById('openMenu');
+            var closeBtn = document.getElementById('closeMenu');
+            var nav = document.getElementById('mainNav');
+
+            openBtn.addEventListener('click', function(){
+                nav.classList.add('active');
+            });
+
+            closeBtn.addEventListener('click', function(){
+                nav.classList.remove('active');
+            });
+
+            var links = nav.querySelectorAll('a');
+            for(var i = 0; i < links.length; i++){
+                links[i].addEventListener('click', function(){
+                    nav.classList.remove('active');
+                });
+            }
+
+            var faqButtons = document.querySelectorAll('.faq-question');
+            for(var j = 0; j < faqButtons.length; j++){
+                faqButtons[j].addEventListener('click', function(){
+                    var item = this.parentElement;
+                    var wasOpen = item.classList.contains('open');
+                    var allItems = document.querySelectorAll('.faq-item');
+                    for(var k = 0; k < allItems.length; k++){
+                        allItems[k].classList.remove('open');
+                    }
+                    if(!wasOpen){
+                        item.classList.add('open');
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
