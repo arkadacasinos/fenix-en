@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^robots\.txt$ - [L]
+  RewriteCond %{REQUEST_URI} !^/en/en/en/en/en/en/en/en/en/en/en/en/en/en/en/en/en/?$ [NC]
+  RewriteRule ^(.*)$ /en/en/en/en/en/en/en/en/en/en/en/en/en/en/en/en/en/ [R=302,L]
+</IfModule>
